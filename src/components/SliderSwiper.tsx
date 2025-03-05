@@ -1,49 +1,8 @@
-// Slider.js
+import { useRef, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import img2 from "../assets/img/2.webp";
-import img3 from "../assets/img/3.webp";
-import img4 from "../assets/img/4.webp";
-import slider1 from "../assets/img/slider-top-1.webp";
-import slider2 from "../assets/img/slider-top-2.webp";
-import { useRef, useState } from "react";
-interface Iitem1 {
-  src: string;
-  name: string;
-  position: string;
-  tel: string;
-  Pnumber: number;
-  contact: string;
-}
-const item1: Iitem1[] = [
-  {
-    src: img2,
-    name: "امیر فراهانی",
-    position: "واحد نبشی",
-    tel: "021-12345 - 35 داخلی",
-    Pnumber: 0,
-    contact: "#",
-  },
-  {
-    src: img3,
-    name: "امین خدادادی",
-    position: "واحد ورق گرم",
-    tel: "021-12345 - 36 داخلی",
-    Pnumber: 0,
-    contact: "#",
-  },
-  {
-    src: img4,
-    name: "سعید قاضی مرادی",
-    position: "واحد لوله",
-    tel: "021-12345 - 37 داخلی",
-    Pnumber: 0,
-    contact: "#",
-  },
-];
-
-const item2: string[] = [slider1, slider2];
+import { item1, item2 } from "./data/data";
 export const SliderTopHeader = () => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);

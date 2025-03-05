@@ -1,5 +1,4 @@
-import about1 from "../assets/img/about1.webp";
-import about2 from "../assets/img/about2.webp";
+import { aboutImage } from "./data/data";
 const About = () => {
   return (
     <div className=" border border-gray-500 p-4 rounded-lg my-10">
@@ -19,8 +18,16 @@ const About = () => {
           </p>
         </div>
         <div className="grid grid-cols-2 ">
-          <img src={about1} alt="logo" className="w-fit mt-10 cursor-pointer" />
-          <img src={about2} alt="logo" className="w-fit mt-10 cursor-pointer" />
+          {aboutImage.map((item, index) => (
+            <img
+              key={index}
+              src={item}
+              alt="logo"
+              className="w-fit mt-10 cursor-pointer"
+            />
+          ))}
+          {/* <img src={about1} alt="logo" className="w-fit mt-10 cursor-pointer" />
+          <img src={about2} alt="logo" className="w-fit mt-10 cursor-pointer" /> */}
         </div>
       </div>
     </div>

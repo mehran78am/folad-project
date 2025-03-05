@@ -1,50 +1,6 @@
-import Angel from "../assets/img/Angel-300x225.webp";
-import Beam from "../assets/img/Beam-300x200.webp";
-import ColdRolled from "../assets/img/Cold-Rolled-300x169.webp";
-import HotRolled from "../assets/img/Hot-Rolled-300x200.webp";
-import Pipe from "../assets/img/Pipe-300x169.webp";
-import Profile from "../assets/img/Profile-300x200.webp";
-import Rebar from "../assets/img/Rebar-300x200.webp";
-import UChannel from "../assets/img/U-Channel-300x200.webp";
-interface Igallery {
-  src: string;
-  content: string;
-}
-const gallery: Igallery[] = [
-  {
-    src: Angel,
-    content: "نبشی",
-  },
-  {
-    src: Beam,
-    content: "تیرآهن",
-  },
-  {
-    src: ColdRolled,
-    content: "ورق سرد",
-  },
-  {
-    src: HotRolled,
-    content: "ورق گرم",
-  },
-  {
-    src: Pipe,
-    content: "لوله",
-  },
-  {
-    src: Profile,
-    content: "پروفیل",
-  },
-  {
-    src: Rebar,
-    content: "میلگرد",
-  },
-  {
-    src: UChannel,
-    content: "ناودانی",
-  },
-];
+import { gallery } from "./data/data";
 const Gallery = () => {
+
   return (
     <div className="w-full">
       <h2 className="text-center text-blue-900 font-bold my-6 text-xl lg:text-3xl">

@@ -1,25 +1,7 @@
-import img6 from "../assets/img/6.webp";
-import img7 from "../assets/img/7.webp";
+
 import { SliderArticle } from "./SliderSwiper";
-interface Iimages {
-  src: string;
-  title: string;
-  content: string;
-}
-const images: Iimages[] = [
-  {
-    src: img7,
-    title: " آهن زنگ نزن چیست و چه کاربردی دارد؟",
-    content:
-      "یکی از پرکاربردترین فولادهایی که در صنایع مختلف کاربرد بسیاری دارد؛ آهن زنگ نزن است. همان گونه که از نام این محصول مشخص...",
-  },
-  {
-    src: img6,
-    title: " آهن زنگ نزن چیست و چه کاربردی دارد؟",
-    content:
-      "یکی از پرکاربردترین فولادهایی که در صنایع مختلف کاربرد بسیاری دارد؛ آهن زنگ نزن است. همان گونه که از نام این محصول مشخص...",
-  },
-];
+import { articleSection } from "./data/data";
+
 const Article: React.FC = () => {
   return (
     <div className="w-full my-12 flex lg:flex-row flex-col gap-3">
@@ -44,7 +26,7 @@ const Article: React.FC = () => {
           </a>
         </div>
         <div className="grid grid-cols-1 gap-y-5">
-          {images.map((item, index) => (
+          {articleSection.map((item, index) => (
             <div
               key={index}
               className="flex flex-row lg:py-0 shadow hover:shadow-2xl transition-shadow duration-300 border border-gray-200 rounded shadow-gray-700"

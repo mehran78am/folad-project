@@ -1,6 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/img/logo.svg";
-
+import { logoImage } from "./data/data";
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isHoverMenu, setIsHoverMenu] = useState(false);
@@ -9,7 +8,7 @@ const Navbar = () => {
       <div className="w-full flex items-center justify-between">
         <div className="w-1/2 flex gap-8">
           <a href="#">
-            <img src={logo} alt="Logo" />
+            <img src={logoImage} alt="Logo" />
           </a>
           <div
             className={`border rounded w-2/3 hidden lg:flex ${

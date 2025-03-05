@@ -7,11 +7,8 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Article from "./components/Article";
 import MobileBar from "./components/MobileBar";
-import Test from "./components/Test";
-import { UserProvider } from "./components/UserContext";
 const App = () => {
   return (
-    <UserProvider>
       <div className="container mx-auto px-4 py-1 overflow-x-hidden select-none relative">
         <Navbar />
         <SliderTop />
@@ -21,9 +18,7 @@ const App = () => {
         <About />
         <Footer />
         <MobileBar />
-        <Test/>
       </div>
-    </UserProvider>
   );
 };
 

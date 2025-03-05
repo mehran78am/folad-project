@@ -1,4 +1,4 @@
-import logo from "../assets/img/logo.svg";
+import { logoImage } from "./data/data";
 const Contact = () => {
   return (
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
@@ -70,7 +70,7 @@ const Contact = () => {
       </div>
       <div className="flex flex-col space-y-1 items-center">
         <a href="#" className="text-base text-blue-700">
-          <img src={logo} alt="logo" className="w-28" />
+          <img src={logoImage} alt="logo" className="w-28" />
         </a>
         <a
           href="#"
