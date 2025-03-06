@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { logoImage } from "./data/data";
+import { useUserContext } from "./UserContext";
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isHoverMenu, setIsHoverMenu] = useState(false);
+  const { users } = useUserContext();
   return (
     <div className="w-full mb-3">
       <div className="w-full flex items-center justify-between">
         <div className="w-1/2 flex gap-8">
           <a href="#">
-            <img src={logoImage} alt="Logo" />
+            <img
+              src={users.site_details?.logo}
+              alt={users.site_details?.title}
+            />
           </a>
           <div
             className={`border rounded w-2/3 hidden lg:flex ${
@@ -34,7 +39,7 @@ const Navbar = () => {
             href="tel:02112345678"
             className="rounded-lg border px-3 py-2 hidden lg:flex justify-center items-center "
           >
-            021-12345678 <i className="fa fa-phone mx-2"></i>
+            {users.site_details?.phone} <i className="fa fa-phone mx-2"></i>
           </a>
           <a
             href="#"

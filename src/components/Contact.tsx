@@ -1,5 +1,7 @@
 import { logoImage } from "./data/data";
+import { useUserContext } from "./UserContext";
 const Contact = () => {
+  const { users } = useUserContext();
   return (
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
       <div className="hidden md:block">
@@ -58,11 +60,17 @@ const Contact = () => {
           <a href="#" className="text-base text-blue-700">
             7 روز هفته - 24 ساعته
           </a>
-          <a href="tel:02112345" className="flex justify-between text-base text-blue-700">
+          <a
+            href="tel:02112345"
+            className="flex justify-between text-base text-blue-700"
+          >
             تلفن
-            <span >021-12345</span>
+            <span>021-12345</span>
           </a>
-          <a href="mailto:info@gmail.com" className="flex justify-between text-base text-blue-700">
+          <a
+            href="mailto:info@gmail.com"
+            className="flex justify-between text-base text-blue-700"
+          >
             ایمیل
             <span>info@gmail.com</span>
           </a>
@@ -70,7 +78,11 @@ const Contact = () => {
       </div>
       <div className="flex flex-col space-y-1 items-center">
         <a href="#" className="text-base text-blue-700">
-          <img src={logoImage} alt="logo" className="w-28" />
+          <img
+            src={users.site_details?.logo}
+            alt={users.site_details?.title}
+            className="w-28"
+          />
         </a>
         <a
           href="#"
@@ -78,10 +90,7 @@ const Contact = () => {
         >
           <span>دانلود کاتالوگ</span>
         </a>
-        <div
-          
-          className="text-base text-blue-700 flex flex-row items-center justify-baseline gap-x-3"
-        >
+        <div className="text-base text-blue-700 flex flex-row items-center justify-baseline gap-x-3">
           <span>
             <a href="#" target="_blank">
               <svg

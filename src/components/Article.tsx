@@ -1,8 +1,9 @@
-
 import { SliderArticle } from "./SliderSwiper";
-import { articleSection } from "./data/data";
+import { useUserContext } from "./UserContext";
+// import { articleSection } from "./data/data";
 
 const Article: React.FC = () => {
+  const { users } = useUserContext();
   return (
     <div className="w-full my-12 flex lg:flex-row flex-col gap-3">
       <div className="w-full lg:w-1/2">
@@ -26,7 +27,7 @@ const Article: React.FC = () => {
           </a>
         </div>
         <div className="grid grid-cols-1 gap-y-5">
-          {articleSection.map((item, index) => (
+          {/* {articleSection.map((item, index) => (
             <div
               key={index}
               className="flex flex-row lg:py-0 shadow hover:shadow-2xl transition-shadow duration-300 border border-gray-200 rounded shadow-gray-700"
@@ -49,6 +50,33 @@ const Article: React.FC = () => {
               <img
                 src={item.src}
                 alt="article img"
+                className="mr-3 w-32 h-32 sm:h-auto sm:w-1/3 p-4 rounded-3xl!"
+              />
+            </div>
+          ))} */}
+          {users.services?.map((item: any, index: number) => (
+            <div
+              key={index}
+              className="flex flex-row lg:py-0 shadow hover:shadow-2xl transition-shadow duration-300 border border-gray-200 rounded shadow-gray-700"
+            >
+              <div className="w-full sm:w-2/3 px-4 py-2">
+                <h2 className="md:text-justify text-base sm:text-lg xl:text-xl text-bold mb-5 font-bold">
+                  {item.header_text}
+                </h2>
+                <p className="md:text-justify text-gray-500 leading-4 xl:leading-7 font-bold my-4">
+                  {item.description}
+                </p>
+                <a
+                  href="#"
+                  className="text-base text-blue-900 cursor-pointer block text-left"
+                >
+                  ادامه مطالب
+                  <i className="fa fa-chevron-left text-base! mr-3"></i>
+                </a>
+              </div>
+              <img
+                src={item.image}
+                alt={item.title}
                 className="mr-3 w-32 h-32 sm:h-auto sm:w-1/3 p-4 rounded-3xl!"
               />
             </div>
