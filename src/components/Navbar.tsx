@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { logoImage } from "./data/data";
 import { useUserContext } from "./UserContext";
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -77,7 +76,7 @@ const Navbar = () => {
           <div className="sub shadow-2xl absolute right-2 top-5 z-20">
             {isHoverMenu && (
               <ul className=" bg-white text-blue-700 rounded-xl py-4">
-                <li className="flex py-3 px-5 hover:bg-gray-100 hover:text-red-400 transition-all duration-300 relative">
+                {/* <li className="flex py-3 px-5 hover:bg-gray-100 hover:text-red-400 transition-all duration-300 relative">
                   <svg
                     width="24"
                     height="24"
@@ -206,7 +205,15 @@ const Navbar = () => {
                     </defs>
                   </svg>
                   <span className="px-2">تیرآهن</span>
-                </li>
+                </li> */}
+                {users.site_details?.map((item: any) => (
+                  <li
+                    key={item.id}
+                    className="flex py-3 px-5 hover:bg-gray-100 hover:text-red-400 transition-all duration-300 relative"
+                  >
+                    <span className="px-2">{item.title} </span>
+                  </li>
+                ))}
               </ul>
             )}
           </div>

@@ -1,4 +1,3 @@
-import { logoImage } from "./data/data";
 import { useUserContext } from "./UserContext";
 const Contact = () => {
   const { users } = useUserContext();

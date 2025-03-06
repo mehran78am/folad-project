@@ -1,16 +1,15 @@
-import { aboutImage } from "./data/data";
-import { useUserContext } from "./UserContext";
+import about1 from "../assets/img/about1.webp";
+import about2 from "../assets/img/about2.webp";
 const About = () => {
-  const { users } = useUserContext();
+  const aboutImage: string[] = [about1, about2];
   return (
     <div className=" border border-gray-500 p-4 rounded-lg my-10">
       <div className="flex flex-col items-center lg:flex-row lg:my-6 lg:gap-14">
         <div className="w-fit">
           <h3 className="text-blue-900 lg:text-2xl text-xl font-bold mb-5">
-            {users?.blogs} فروشگاه اینترنتی مهدفولاد
+            فروشگاه اینترنتی مهدفولاد
           </h3>
           <p className="text-blue-900 ">
-            {users?.blogs}
             این مجموعه از سال ۱۳۸۳ در زمینه بازرگانی فولاد کار خود را آغاز کرد و
             در جهت گسترش فعالیت و شفاف‌سازی معاملات در سال ۱۳۹۶ اقدام به تاسیس
             شرکت مهد فولاد کیان با نام تجاری مهدفولاد کرد. رضایت‌مندی، پشتیبانی
